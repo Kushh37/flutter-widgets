@@ -12,7 +12,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Utils"),
+        title: Text("Flutter Widgets"),
       ),
       body: Container(
         child: WillpopScope(),
@@ -24,28 +24,48 @@ class _MyHomePageState extends State<MyHomePage> {
 class WillpopScope extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    return Column(
       children: [
-        Container(
-          height: 50,
-          width: 150,
-          child: ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, MyRoutes.willpopscope);
-              },
-              child: "WillPopScope".text.make()),
-        ).p12(),
-        Container(
-          height: 50,
-          width: 150,
-          child: ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, MyRoutes.tabBar);
-              },
-              child: "Tab Bar".text.make()),
-        ).p12(),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Container(
+              height: 50,
+              width: 150,
+              child: ElevatedButton(
+                  onPressed: () {
+                    //context.vxNav.push(Uri.parse(MyRoutes.willpopscope));
+                    Navigator.pushNamed(context, MyRoutes.willpopscope);
+                  },
+                  child: "WillPopScope".text.make()),
+            ).p12(),
+            Container(
+              height: 50,
+              width: 150,
+              child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, MyRoutes.tabBar);
+                  },
+                  child: "Tab Bar".text.make()),
+            ).p12(),
+          ],
+        ),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Container(
+              height: 50,
+              width: 150,
+              child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, MyRoutes.animatedBuilder);
+                  },
+                  child: "Animated Builder".text.make()),
+            ).p12()
+          ],
+        )
       ],
     );
   }

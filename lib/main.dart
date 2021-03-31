@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widgets/Pages/animatedbuilder.dart';
 import 'package:flutter_widgets/Pages/tabbar.dart';
 import 'package:flutter_widgets/Routes/routes.dart';
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Utils',
+      title: 'Flutter Widgets',
       theme: ThemeData(primarySwatch: Colors.amber),
       home: MyHomePage(),
       initialRoute: MyRoutes.homeRoute,
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
         MyRoutes.homeRoute: (context) => MyHomePage(),
         MyRoutes.willpopscope: (context) => WilllPopScope(),
         MyRoutes.tabBar: (context) => TaabBar(),
+        MyRoutes.animatedBuilder: (context) => AanimatedBuilder(),
       },
     );
   }

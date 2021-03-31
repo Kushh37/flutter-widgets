@@ -18,7 +18,9 @@ class _TaabBarState extends State<TaabBar> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: "Tab Bar".text.make(),
+      ),
       body: Center(
         child: Column(
           children: [
